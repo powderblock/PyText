@@ -15,14 +15,14 @@ server.login(account+'@gmail.com', password)
 
 print(">Setting up message to be sent.")
 #Get number to text:
-number = int(raw_input("Enter a number to text. (Example: 1234567890) "))
+number = str(raw_input("Enter a number to text. (Example: 1234567890) "))
 
 #Get SMS gateway:
-gateway = str(raw_input("Enter SMS Gateway domain. (AT&T: txt.att.net, T-Mobile: tmomail.net) "))
+gateway = str(raw_input("Enter SMS Gateway domain. (AT&T: @txt.att.net, T-Mobile: @tmomail.net) "))
 
 #Get message from user:
 message = str(raw_input("Enter a message: "))
 
 #Send message
-server.sendmail('', number+'@'+gateway, message)
+server.sendmail('', number+gateway, message)
 print(">Message sent!")
